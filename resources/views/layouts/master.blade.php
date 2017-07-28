@@ -29,6 +29,16 @@
     </div>
 
     <div class="container">
+
+    <!-- Start Flash message -->
+    @if($FlashMsg = session('message'))
+      <div class="col-sm-8 alert alert-success alert-dismissable">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+          {{ $FlashMsg }}
+      </div>
+    @endif
+    <!-- End Flash message -->
+
       <div class="row">
 
     	@yield('content')
